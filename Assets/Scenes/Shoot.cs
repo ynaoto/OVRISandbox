@@ -22,11 +22,7 @@ public class Shoot : MonoBehaviour
     {
         var scale = startScale;
         var pos = transform.position + spawnDistrance*transform.forward;
-        // var obj = Instantiate(prefab, pos, Quaternion.identity, parent);
-        var obj = Instantiate(prefab, parent);
-        // obj.transform.SetPositionAndRotation(pos, Quaternion.identity);
-        // obj.transform.SetPositionAndRotation(transform.position, Quaternion.identity);
-        obj.transform.position = transform.position;
+        var obj = Instantiate(prefab, pos, Quaternion.identity, parent);
 
         while (!OVRInput.GetUp(button, controller))
         {
